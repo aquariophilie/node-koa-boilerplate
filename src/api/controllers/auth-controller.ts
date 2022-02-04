@@ -3,7 +3,7 @@ import { Context, Next } from 'koa';
 import { request, summary, body, tagsAll, responsesAll, security } from 'koa-swagger-decorator';
 
 import container from '../../config/inversify.config';
-import { AuthService } from '../../interfaces/services/IAuth';
+import { AuthService } from '../../interfaces/services/auth.interface';
 import { TYPES } from '../../types';
 
 @tagsAll(['auth'])

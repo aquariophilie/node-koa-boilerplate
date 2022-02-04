@@ -3,7 +3,7 @@ import createHttpError from 'http-errors';
 import { inject, injectable } from 'inversify';
 
 import { IUser, User } from '../interfaces/models/user.interface';
-import { UserService } from '../interfaces/services/IUser';
+import { UserService } from '../interfaces/services/user.interface';
 import { TYPES } from '../types';
 
 @injectable()

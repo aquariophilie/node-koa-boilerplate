@@ -4,7 +4,7 @@ import { request, summary, body, tagsAll, responses, security, path } from 'koa-
 
 import container from '../../config/inversify.config';
 import { TYPES } from '../../types';
-import { UserService } from '../../interfaces/services/IUser';
+import { UserService } from '../../interfaces/services/user.interface';
 
 const commonResponse = {
     400: { description: 'Not valid request' },

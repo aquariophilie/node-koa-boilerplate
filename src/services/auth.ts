@@ -5,7 +5,7 @@ import jwt, { Algorithm } from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
 
 import config from '../config';
-import { AuthService } from '../interfaces/services/IAuth';
+import { AuthService } from '../interfaces/services/auth.interface';
 import { IUser, User } from '../interfaces/models/user.interface';
 import { TYPES } from '../types';
 

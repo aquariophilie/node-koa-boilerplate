@@ -4,9 +4,9 @@ import { TYPES } from '../types';
 import { MongoDBClient } from '../loaders/mongo-client';
 import { User } from '../interfaces/models/user.interface';
 import { UserModel } from '../models/user';
-import { AuthService } from '../interfaces/services/IAuth';
+import { AuthService } from '../interfaces/services/auth.interface';
 import { AuthServiceImpl } from '../services/auth';
-import { UserService } from '../interfaces/services/IUser';
+import { UserService } from '../interfaces/services/user.interface';
 import { UserServiceImpl } from '../services/user';
 
 const myContainer = new Container();
