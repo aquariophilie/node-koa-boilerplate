@@ -102,3 +102,14 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Environment varibales
+.env*
+!.env*.example
+
+# Keys
+public.pem
+private.pem
+
+# This file is automatically built
+swagger.json
