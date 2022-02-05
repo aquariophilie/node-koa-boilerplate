@@ -2,6 +2,10 @@
 
 A boilerplate for a simple api in Node using KOA framework with TypeScript and dependency injection using Inversify.
 
+## Prerequisites
+
+* [Node.js](https://nodejs.org/) v14.x or later
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install the dependencies.
