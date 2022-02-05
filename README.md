@@ -1,6 +1,6 @@
 # Node - Koa - Boilerplate Project
 
-A boilerplate for a simple api in Node using KOA framework with TypeScript and dependency injection using Inversify.
+A boilerplate for a simple API in [Node.js](https://nodejs.org/) using the [Koa.js framework](https://koajs.com/) with [TypeScript](https://www.typescriptlang.org/) and dependency injection using [InversifyJS](https://inversify.io/).
 
 ## Prerequisites
 
