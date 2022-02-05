@@ -1,10 +1,11 @@
-# Node - Koa - Boilerplate Project
+# node-koa-boilerplate
 
 A boilerplate for a simple API in [Node.js](https://nodejs.org/) using the [Koa.js framework](https://koajs.com/) with [TypeScript](https://www.typescriptlang.org/) and dependency injection using [InversifyJS](https://inversify.io/).
 
 ## Prerequisites
 
 * [Node.js](https://nodejs.org/) v14.x or later
+* Connection details (URI, user, password and db name) to a running instance of [MongoDB](https://www.mongodb.com/)
 
 ## Installation
 
@@ -25,7 +26,13 @@ openssl ec -in private.pem -pubout -out public.pem
 
 ## Usage
 
-Make a copy of .env.example to .env and add database configurations
+### Runtime customization
+
+Before running the code you need to customize its runtime enviroment.
+Create an `.env` file starting from the provided `.env.example`, then customize it as described in the comments
+(for instance you need the supply the database configuration).
+
+### Initialize (or migrate) database
 
 ```bash
 # View database migrations status
@@ -34,17 +41,25 @@ npm run migrate:status
 npm run migrate:up
 ```
 
+### Start in development mode
+
 ```bash
 # Start in development mode with nodemon
 npm start
 ```
+
+### Build for production
+
+Make sure your `.env` file has the line `NODE_ENV=development` commented out, then run
 
 ```bash
 # Build
 npm run build
 ```
 
-Swagger docs available at "api/swagger-html" only in development environment
+### API documentation
+
+Documentation built with [Swagger](https://swagger.io/) is available under "api/swagger-html" (only in development environment).
 
 ## Copyright and license
 
