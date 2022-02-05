@@ -14,7 +14,7 @@ Use the package manager [npm](https://www.npmjs.com/) to install the dependencie
 npm install
 ```
 
-For the authentication in this example we are using JWT token with "ES256" algorithm and async keys. For generate private and public keys for authentication use openssl. We are also using a short-lived token and a long-lived refresh token.
+For the authentication in this example we are using a [JWT](https://jwt.io/) token with "ES256" algorithm and async keys. For generate private and public keys for authentication use openssl. We are also using a short-lived token and a long-lived refresh token.
 
 ```bash
 openssl ecparam -genkey -name prime256v1 -noout -out private.pem
