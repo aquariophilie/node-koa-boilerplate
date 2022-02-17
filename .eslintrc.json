@@ -1,4 +1,7 @@
 {
+    "ignorePatterns": [
+        "**/*.json"
+    ],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
@@ -8,6 +11,11 @@
     "plugins": [
         "@typescript-eslint"
     ],
+    "settings": {
+        "react": {
+            "version": "latest"
+        }
+    },
     "rules": {
         "indent": [
             "error",
@@ -27,22 +35,61 @@
         ],
         "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint/no-explicit-any": "off",
-        "max-len": [2, 160, 4, {"ignoreUrls": true}],
+        "max-len": [
+            2,
+            160,
+            4,
+            {
+                "ignoreUrls": true
+            }
+        ],
         "lines-between-class-members": "off",
         "prefer-object-spread": "off",
         "padded-blocks": "off",
         "import/extensions": "off",
         "import/prefer-default-export": "off",
-        "object-curly-newline": ["error", {
-            "ObjectExpression": { "multiline": true, "minProperties": 2 },
-            "ObjectPattern": { "multiline": true },
-            "ImportDeclaration": "never",
-            "ExportDeclaration": { "multiline": true, "minProperties": 3 }
-        }],
+        "object-curly-newline": [
+            "error",
+            {
+                "ObjectExpression": {
+                    "multiline": true,
+                    "minProperties": 2
+                },
+                "ObjectPattern": {
+                    "multiline": true
+                },
+                "ImportDeclaration": "never",
+                "ExportDeclaration": {
+                    "multiline": true,
+                    "minProperties": 3
+                }
+            }
+        ],
         "no-useless-constructor": "off",
-        "no-empty-function": ["error", { "allow": ["functions", "constructors"] }],
+        "no-empty-function": [
+            "error",
+            {
+                "allow": [
+                    "functions",
+                    "constructors"
+                ]
+            }
+        ],
         "class-methods-use-this": "off",
-        "no-underscore-dangle": ["error", { "allow": ["_id"] }],
-        "no-param-reassign": ["error", { "props": false }]
+        "no-underscore-dangle": [
+            "error",
+            {
+                "allow": [
+                    "_id"
+                ]
+            }
+        ],
+        "no-param-reassign": [
+            "error",
+            {
+                "props": false
+            }
+        ],
+        "@typescript-eslint/no-var-requires": "off"
     }
 }

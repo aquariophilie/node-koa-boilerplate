@@ -53,32 +53,12 @@ export class AuthServiceImpl implements AuthService {
     }
 
     public async generateRefreshToken(user: IUser): Promise<string> {
-        const token = jwt.sign({
-            data: {
-                email: user.email,
-                name: user.name,
-                _id: user._id,
-                jti: uuidv4(),
-            },
-        }, config.jwtPrivateKey, {
-            algorithm: config.jwtAlgorithm as Algorithm,
-            expiresIn: config.jwtRefreshExpiresIn,
-        });
-        return token;
+        const refreshToken = this.generateJwtToken(user, config.jwtRefreshExpiresIn);
+        return refreshToken;
     }
 
     public async generateAccessToken(user: IUser): Promise<string> {
-        const accessToken = jwt.sign({
-            data: {
-                email: user.email,
-                name: user.name,
-                _id: user._id,
-                jti: uuidv4(),
-            },
-        }, config.jwtPrivateKey, {
-            algorithm: config.jwtAlgorithm as Algorithm,
-            expiresIn: config.jwtExpiresIn,
-        });
+        const accessToken = this.generateJwtToken(user, config.jwtExpiresIn);
         return accessToken;
     }
 
@@ -90,5 +70,19 @@ export class AuthServiceImpl implements AuthService {
         } catch (error) {
             throw createHttpError(401, 'Invalid Credential');
         }
+    }
+
+    public generateJwtToken(user: IUser, expiresIn: string) {
+        return jwt.sign({
+            data: {
+                email: user.email,
+                name: user.name,
+                _id: user._id,
+                jti: uuidv4(),
+            },
+        }, config.jwtPrivateKey, {
+            algorithm: config.jwtAlgorithm as Algorithm,
+            expiresIn,
+        });
     }
 }
