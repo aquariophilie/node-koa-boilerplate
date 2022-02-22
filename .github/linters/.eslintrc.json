@@ -1,0 +1,95 @@
+{
+    "ignorePatterns": [
+        "**/*.json"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "react": {
+            "version": "latest"
+        }
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "import/no-unresolved": "off",
+        "@typescript-eslint/indent": [
+            "error",
+            4
+        ],
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "max-len": [
+            2,
+            160,
+            4,
+            {
+                "ignoreUrls": true
+            }
+        ],
+        "lines-between-class-members": "off",
+        "prefer-object-spread": "off",
+        "padded-blocks": "off",
+        "import/extensions": "off",
+        "import/prefer-default-export": "off",
+        "object-curly-newline": [
+            "error",
+            {
+                "ObjectExpression": {
+                    "multiline": true,
+                    "minProperties": 2
+                },
+                "ObjectPattern": {
+                    "multiline": true
+                },
+                "ImportDeclaration": "never",
+                "ExportDeclaration": {
+                    "multiline": true,
+                    "minProperties": 3
+                }
+            }
+        ],
+        "no-useless-constructor": "off",
+        "no-empty-function": [
+            "error",
+            {
+                "allow": [
+                    "functions",
+                    "constructors"
+                ]
+            }
+        ],
+        "class-methods-use-this": "off",
+        "no-underscore-dangle": [
+            "error",
+            {
+                "allow": [
+                    "_id"
+                ]
+            }
+        ],
+        "no-param-reassign": [
+            "error",
+            {
+                "props": false
+            }
+        ],
+        "@typescript-eslint/no-var-requires": "off"
+    }
+}
