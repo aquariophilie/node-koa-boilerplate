@@ -7,6 +7,16 @@ A boilerplate for a simple API in [Node.js](https://nodejs.org/) using the [Koa.
 * [Node.js](https://nodejs.org/) v14.x or later
 * Connection details (URI, user, password and db name) to a running instance of [MongoDB](https://www.mongodb.com/)
 
+### Prerequisites for Kubernetes deployment with Helm chart
+
+* You have [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster 
+
+* You have a Kubernetes cluster like [Minikube](https://kubernetes.io/docs/setup/minikube/)
+
+* You have the [Helm](https://helm.sh/docs/intro/install/) command line installed
+
+* You have created and published a Docker image for your application, in this example we use the public repository rafaelesposito/node-koa-boilerplate
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install the dependencies.
@@ -56,6 +66,25 @@ Make sure your `.env` file has the line `NODE_ENV=development` commented out, th
 # Build
 npm run build
 ```
+
+### Deploy to Kubernetes using the chart
+
+From the directory `chart` run:
+
+```sh
+# Deploy with helm
+helm install my-release koa-mongo-k8s
+```
+
+For change the database username and password create the secrets with base64 encoded:
+```sh
+echo -n 'username' | base64
+dXNlcm5hbWU=
+
+echo -n 'password' | base64
+cGFzc3dvcmQ=
+```
+and replace the values ​​in the secret.yaml file.
 
 ### API documentation
 
