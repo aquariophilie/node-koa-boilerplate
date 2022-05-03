@@ -57,8 +57,8 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Do not lint downloaded code - see https://github.com/github/super-linter
-          FILTER_REGEX_EXCLUDE: .*/download/.*
+          # Do not lint Helm templates - see https://github.com/github/super-linter
+          FILTER_REGEX_EXCLUDE: .*/templates/.*
           VALIDATE_JAVASCRIPT_STANDARD: false
           VALIDATE_TYPESCRIPT_STANDARD: false
           TYPESCRIPT_ES_CONFIG_FILE: .eslintrc.json
