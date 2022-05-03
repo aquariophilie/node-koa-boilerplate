@@ -6,6 +6,11 @@
 # You can disable line with:              #
 # # yamllint disable-line                 #
 ###########################################
+
+# Ignore Helm templates
+ignore: |
+  templates
+
 rules:
   braces:
     level: warning
