@@ -73,20 +73,22 @@ npm run build
 
 From the directory `chart` run:
 
-```sh
+```bash
 # Deploy with helm
 helm install my-release koa-mongo-k8s
 ```
 
-For change the database username and password create the secrets with base64 encoded:
-```sh
+For changing the database username and password create the secrets with base64 encoded:
+
+```bash
 echo -n 'username' | base64
 dXNlcm5hbWU=
 
 echo -n 'password' | base64
 cGFzc3dvcmQ=
 ```
-and replace the values ​​in the secret.yaml file.
+
+and replace the values in the `secret.yaml` file.
 
 ### API documentation
 
