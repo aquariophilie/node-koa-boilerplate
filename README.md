@@ -15,7 +15,7 @@ A boilerplate for a simple API in [Node.js](https://nodejs.org/) using the [Koa.
 
 * You have a Kubernetes cluster like [Minikube](https://kubernetes.io/docs/setup/minikube/)
 
-* You have the [Helm](https://helm.sh/docs/intro/install/) command line installed
+* You have the [Helm](https://helm.sh/docs/intro/install/) command-line installed
 
 * You have created and published a Docker image for your application, in this example we use the public repository rafaelesposito/node-koa-boilerplate
 
