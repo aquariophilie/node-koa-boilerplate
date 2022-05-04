@@ -11,7 +11,7 @@ A boilerplate for a simple API in [Node.js](https://nodejs.org/) using the [Koa.
 
 ### Prerequisites for Kubernetes deployment with Helm chart
 
-* You have [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster 
+* You have [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured for your cluster
 
 * You have a Kubernetes cluster like [Minikube](https://kubernetes.io/docs/setup/minikube/)
 
