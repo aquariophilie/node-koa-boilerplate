@@ -1,5 +1,6 @@
 # node-koa-boilerplate
 
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/aquariophilie/node-koa-boilerplate)
 [![GitHub Super-Linter](https://github.com/aquariophilie/node-koa-boilerplate/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 A boilerplate for a simple API in [Node.js](https://nodejs.org/) using the [Koa.js framework](https://koajs.com/) with [TypeScript](https://www.typescriptlang.org/) and dependency injection using [InversifyJS](https://inversify.io/).
